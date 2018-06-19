@@ -19,14 +19,18 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("./public"));
 
 
-// connect to database
+// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+
+// Set mongoose to leverage built in JavaScript ES6 Promises
+// Connect to the Mongo DB
 mongoose.Promise = Promise;
-var dbConnect = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-if(process.env.MONGODB_URI) {
-    mongoose.connect(process.env.MONGODB_URI)
-} else {
-    mongoose.connect(dbConnect);
-}
+mongoose.connect(mongolab-objective-37338);
+// if(process.env.MONGODB_URI) {
+//     mongoose.connect(process.env.MONGODB_URI)
+// } else {
+//     mongoose.connect(dbConnect);
+// }
 
 var db = mongoose.connection;
 db.on('error',function(err){
@@ -59,10 +63,4 @@ app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });
 
-// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
-// Set mongoose to leverage built in JavaScript ES6 Promises
-// Connect to the Mongo DB
-mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI);
