@@ -8,17 +8,12 @@ a#save {
 }
 
 .card-action a {
-    color: black;
+    color: rgb(194, 194, 194);
 }
-footer{
-    position: relative;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #efefef;
-  text-align: center;
-}
+
 .delete-button {
     margin-left: 10px;
+}
+.brand-logo{
+    margin-left: 20px;
 }

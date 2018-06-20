@@ -2,10 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>Mongo Scarper</title>
-    <!-- Compiled and minified CSS -->
+    <title>Mongo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     
@@ -19,17 +17,17 @@
     <div class="container-fluid">
         <nav>
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo center">Mongo Scraper</a>
+                <a href="#!" class="brand-logo left">Mongo Scraper</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#" onclick="displaySaved()">SAVED ARTICLES</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#" onclick="displaySaved()">Saved Articles</a></li>
                     <button data-target="scrape-article" class="btn waves-effect waves-light black modal-trigger" onclick="displayScrape()">SCRAPE ARTICLES</button>
 
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#" onclick="displaySAved()">SAVED ARTICLES</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#" onclick="displaySAved()">Saved Articles</a></li>
                     <button data-target="scrape-article" class="btn waves-effect waves-light modal-trigger" onclick="displayScrape()">SCRAPE ARTICLES</button>
                 </ul>
             </div>
@@ -44,36 +42,23 @@
             <div class="col s12 m4 l4" id="nyt-2">
             </div>
         </div>
-        <!-- Modal Structure  for scraping article information-->
-        <div id="scrape-article" class="modal">
-            <div class="modal-content">
-                <h4>Number of Articles Scrapped</h4>
-                <h4 id="total-number"></h4>
-            </div>
-            <div class="modal-footer">
-                <a href="#" class="modal-action modal-close waves-effect waves-green btn">Close</a>
-            </div>
-        </div>
+        
     </div>
-    <!-- Modal Structure for creating a note -->
+
     <div id="notes" class="modal">
         <div class="modal-content">
             <form>
                 <h4 id="display-title"></h4>
                 <div id="display-note"></div>
                 <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Enter Notes Here</label>
+                <label for="textarea1">Add Notes Here</label>
             </form>
         </div>
         <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn" id="savenote">Save Note</a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green red btn" id="savenote">Save Notes</a>
         </div>
     </div>
-    <div class="container-fluid text-center" >
-        <footer class="footer">
-            <p class="text-muted">Dan Sasaki</p>
-        </footer>
-    </div>
+  
 
 </body>
 

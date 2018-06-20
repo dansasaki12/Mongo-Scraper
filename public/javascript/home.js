@@ -10,7 +10,7 @@ function displayScrape() {
           var mainDiv = $("<div>");
           mainDiv.addClass("card grey lighten-2");
           var cardContentDiv = $("<div>");
-          cardContentDiv.addClass("card-content black-text");
+          cardContentDiv.addClass("card-content white black-text");
           var spanTitle = $("<span>");
           spanTitle.addClass("card-title");
           spanTitle.attr("data-id", data[i]._id);
@@ -29,7 +29,7 @@ function displayScrape() {
           a.text("Go to the article");
           cardActionDiv.append(a);
           var saveArticle = $("<a>");
-          saveArticle.addClass("waves-effect waves-light btn save-button");
+          saveArticle.addClass("waves-effect waves-light red btn save-button");
           saveArticle.attr("id", data[i]._id);
           saveArticle.text("Save Article");
           var byline = $("<p>");
