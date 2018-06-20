@@ -1,5 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var exphbs  = require('express-handlebars');
 var request = require("request");
 var mongoose = require("mongoose");
 var Note = require("./models/Note.js");
