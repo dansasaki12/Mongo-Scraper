@@ -22,7 +22,7 @@ app.use(express.static("./public"));
 
 // connect to database
 mongoose.Promise = Promise;
-var dbConnect = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+var dbConnect = process.env.MONGODB_URI || "mongodb://heroku_p9f2dmj6:12jello12@ds263460.mlab.com:63460/heroku_p9f2dmj6";
 if(process.env.MONGODB_URI) {
     mongoose.connect(process.env.MONGODB_URI)
 } else {
