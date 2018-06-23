@@ -8,7 +8,7 @@ var Save = require("../models/Save");
 
 module.exports = function (app) {
     app.get("/scrape", function (req, res) {
-        request("https://www.nytimes.com/", function (error, response, html) {
+        request("http://www.nytimes.com/", function (error, response, html) {
 
             var $ = cheerio.load(html);
 
